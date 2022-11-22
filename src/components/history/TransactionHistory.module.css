@@ -1,0 +1,26 @@
+.transactionHistory {
+  background-color: rgb(161, 225, 236);
+  text-align: center;
+  width: 480px;
+  margin: 0 auto;
+  padding: 8px;
+}
+.table {
+  width: 100%;
+}
+.headerTab {
+  background-color: blue;
+  font-size: 16px;
+  line-height: 12px;
+  color: azure;
+  padding: 20px;
+  text-transform: uppercase;
+}
+.rowTab {
+  background-color: rgb(244, 244, 247);
+  font-size: 16px;
+  line-height: 12px;
+  color: rgb(51, 54, 54);
+  padding: 16px;
+  text-transform: capitalize;
+}
