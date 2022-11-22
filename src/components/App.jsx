@@ -1,5 +1,5 @@
 import Profile from 'components/profile/Profile.jsx';
-// import Statistics from 'components/statistics/Statistics.jsx';
+import Statistics from 'components/statistics/Statistics.jsx';
 // import FriendList from 'components/friendList/FriendList.jsx';
 // import TransactionHistory from 'components/history/TransactionHistory.jsx';
 import user from 'user.json';
@@ -16,9 +16,9 @@ const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      {/* <Statistics title="Upload stats" />
-      <FriendList />
-      <TransactionHistory /> */}
+      <Statistics title="Upload stats" />
+      {/* <FriendList /> */}
+      {/* <TransactionHistory /> */}
     </div>
   );
 };
