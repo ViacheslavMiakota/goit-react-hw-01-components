@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
-import css from './Statistics.module.css';
-import data from 'data.json';
-import StatisticEvent from 'components/event/Event.jsx';
+import StatisticEvent from 'components/Event/Event.jsx';
+import { StatisticSection, Title } from './Statistics.styled';
 
-const Statistics = ({ title }) => {
+const Statistics = ({ title, stats }) => {
   return (
-    <section className={css.statistics}>
-      {title ? <h2 className={css.title}>{title}</h2> : false}
-      <StatisticEvent events={data} />
-    </section>
+    <StatisticSection>
+      {title ? <Title>{title}</Title> : false}
+      <StatisticEvent events={stats} />
+    </StatisticSection>
   );
 };
 export default Statistics;
 Statistics.prototype = {
   title: PropTypes.string,
-  StatisticEvent: PropTypes.array.isRequired,
+  stats: PropTypes.string.isRequired,
 };

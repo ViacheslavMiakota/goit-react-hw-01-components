@@ -1,4 +1,6 @@
-.statistics {
+import styled from '@emotion/styled';
+
+export const StatisticSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +11,7 @@
   margin-bottom: 40px;
   margin-top: 40px;
   padding: 40px;
-}
-.title {
+`;
+export const Title = styled.h2`
   text-transform: uppercase;
-}
+`;

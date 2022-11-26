@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
-import css from './TransactionHistory.module.css';
 import transactions from 'transactions.json';
+import { History, Table, RowTab, HeaderTab } from './TransactionHistory.styled';
 
 const TransactionHistory = ({ transactions }) => {
   return (
-    <table className={css.transactionHistory}>
-      <thead className={css.table}>
+    <History>
+      <Table>
         <tr>
-          <th className={css.headerTab}>Type</th>
-          <th className={css.headerTab}>Amount</th>
-          <th className={css.headerTab}>Currency</th>
+          <HeaderTab>Type</HeaderTab>
+          <HeaderTab>Amount</HeaderTab>
+          <HeaderTab>Currency</HeaderTab>
         </tr>
-      </thead>
+      </Table>
       <HistoryItem />
-    </table>
+    </History>
   );
 };
 
@@ -22,9 +22,9 @@ const HistoryItem = () => {
     return (
       <tbody key={id}>
         <tr>
-          <td className={css.rowTab}>{type}</td>
-          <td className={css.rowTab}>{amount}</td>
-          <td className={css.rowTab}>{currency}</td>
+          <RowTab>{type}</RowTab>
+          <RowTab>{amount}</RowTab>
+          <RowTab>{currency}</RowTab>
         </tr>
       </tbody>
     );
@@ -34,6 +34,6 @@ export default TransactionHistory;
 TransactionHistory.prototype = {
   id: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
 };

@@ -1,4 +1,6 @@
-.profile {
+import styled from '@emotion/styled';
+
+export const ProfileBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,40 +12,40 @@
   margin-top: 40px;
   padding-bottom: 40px;
   padding-top: 40px;
-}
-.description {
+`;
+export const Description = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.name {
+`;
+export const Avatar = styled.img`
+  width: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+`;
+export const Username = styled.p`
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
-}
-
-.location {
+`;
+export const Tag = styled.p``;
+export const Location = styled.p`
   font-size: 24px;
   line-height: 35px;
-}
-.stats {
+`;
+export const Stats = styled.ul`
   display: flex;
   flex-direction: row;
   width: 100%;
   gap: 10px;
   justify-content: space-around;
-}
-.label {
+`;
+export const Label = styled.span`
   display: flex;
-}
-.quantity {
+`;
+export const Quantity = styled.span`
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
-}
-.avatar {
-  width: 200px;
-  border-radius: 50%;
-  background-color: #fff;
-}
+`;

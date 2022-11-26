@@ -1,21 +1,17 @@
 import PropTypes from 'prop-types';
-import css from './Event.module.css';
+import { StatsList, Item, Label, Percentage } from './Event.styled';
 
 const StatisticEvent = ({ events }) => {
   console.log(events);
   return (
-    <ul className={css.statsList}>
+    <StatsList>
       {events.map(({ id, label, percentage }) => (
-        <li
-          className={css.item}
-          style={{ backgroundColor: getRandomHexColor() }}
-          key={id}
-        >
-          <span className={css.label}>{label}</span>
-          <span className={css.percentage}>{percentage}%</span>
-        </li>
+        <Item style={{ backgroundColor: getRandomHexColor() }} key={id}>
+          <Label>{label}</Label>
+          <Percentage>{percentage}%</Percentage>
+        </Item>
       ))}
-    </ul>
+    </StatsList>
   );
 };
 function getRandomHexColor() {
